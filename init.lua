@@ -288,6 +288,16 @@ require('lazy').setup({
       },
     },
   },
+  { 'numirias/semshi',
+    name = 'semshi',
+    ft = { 'python' },
+    build = ':UpdateRemotePlugins',
+    config = function()
+      vim.g['semshi#filetypes'] = { 'python' }
+      vim.g['semshi#no_default_builtin_highlight'] = true
+      vim.g['semshi#simplify_markup'] = true
+    end,
+  },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
